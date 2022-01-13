@@ -1,6 +1,3 @@
-const host = process.env.BASE_HOST || 'localhost'
-const port = process.env.BASE_PORT || 3000
-
 module.exports = {
   mode: 'universal',
   head: {
@@ -42,7 +39,7 @@ module.exports = {
   },
 
   server: {
-    host,
-    port,
+    host: process.env.BASE_HOST || '',
+    port: process.env.BASE_PORT || '',
   },
 }

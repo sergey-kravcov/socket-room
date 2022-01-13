@@ -8,7 +8,7 @@
     </div>
     <div v-if="username" class="flex items-center">
       <div class="pr-2 mr-2 border-r">{{ username }}</div>
-      <BaseButton text="Выход" icon="logout" theme="link" />
+      <BaseButton text="Выход" icon="logout" theme="link" @click="$emit('logout')" />
     </div>
   </header>
 </template>

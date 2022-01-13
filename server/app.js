@@ -2,7 +2,6 @@ const http = require('http')
 const app = require('express')()
 const server = http.createServer(app)
 const io = require('socket.io')(server)
-
 const MainService = require('./services/MainService')
 
 const debconsole = require('./utils/debconsole')

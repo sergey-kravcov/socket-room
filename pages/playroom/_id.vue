@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import { upperFirst } from 'lodash-es'
-import { get } from 'vuex-pathify'
+import { upperFirst } from 'lodash'
+import { sync } from 'vuex-pathify'
 import responseStatus from '~/server/enums/responseStatus'
 import Preparation from '@/components/Preparation.vue'
 import Waiting from '@/components/Waiting.vue'
@@ -18,10 +18,10 @@ export default {
     componentName() {
       return upperFirst(this.room.status)
     },
-    ...get(['room', 'user']),
+    ...sync(['room', 'user']),
   },
   beforeMount() {
-    if (this.user && this.user.id) {
+    if (this.user?.id) {
       addEventListener('beforeunload', this.refresh)
     } else {
       this.checkSavedUser()
