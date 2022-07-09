@@ -1,7 +1,7 @@
 <template>
   <BaseSlider
     :class="[even ? 'bg-blue-400 text-gray-800 border-gray-800' : 'bg-gray-800 text-blue-400 border-blue-400']"
-    class="my-10 mx-5 border-4 border-dashed max-w-[700px] min-h-[200px]"
+    class="mb-10 mx-5 border-4 border-dashed max-w-[700px] min-h-[200px]"
     @switch-slide="calculateEven"
   >
     <div>

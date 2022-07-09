@@ -1,5 +1,5 @@
 <template>
-  <span class="select-none material-icons">
+  <span class="select-none material-icons flex pointer-events-none">
     <slot>{{ name }}</slot>
   </span>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center w-full h-screen text-blue-400 bg-gray-700">
+  <div class="flex flex-col items-center w-full min-h-screen py-10 text-blue-400 bg-gray-700">
     <DescriptionSlider />
     <div class="w-[250px] p-4 bg-black/50 shadow-[0_0_10px_5px_rgba(0,0,0,0.3)] login-form mt-20">
       <BaseInput v-model="username" :error-message="usernameError" icon="face" placeholder="Никнейм*" autofocus />

@@ -1,7 +1,7 @@
 <template>
   <button
     :class="theme"
-    class="inline-flex items-center p-1 font-bold rounded disabled:cursor-default"
+    class="inline-flex items-center py-1 px-2 font-bold rounded disabled:cursor-default"
     v-bind="$attrs"
     @click="$emit('click')"
   >
@@ -36,5 +36,8 @@ export default {
 }
 .link {
   @apply text-blue-500 hover:text-blue-600 disabled:text-blue-500/30;
+}
+.reverse {
+  @apply text-gray-300 bg-gray-600 hover:bg-gray-200 hover:text-gray-700 disabled:opacity-40;
 }
 </style>

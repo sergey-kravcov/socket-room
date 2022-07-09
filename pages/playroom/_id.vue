@@ -1,5 +1,5 @@
 <template>
-  <component :is="componentName" />
+  <component :is="componentName" :game-name="gameName" />
 </template>
 
 <script>
@@ -14,6 +14,9 @@ export default {
     Preparation,
     Waiting,
   },
+  data: () => ({
+    gameName: 'Room',
+  }),
   computed: {
     componentName() {
       return upperFirst(this.room.status)
